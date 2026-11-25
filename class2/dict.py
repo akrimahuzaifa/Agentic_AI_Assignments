@@ -8,9 +8,9 @@ dictonary = {
 #print(dictonary["std_org"]) #error because key does not exist
 print(dictonary.get("std_org"))  # Output: None
 
+print("before:", dictonary) 
 dictonary["std_name"] = "Hammad"
 dictonary["std_inst"] = "Jawan Pakistan"
-print("before:", dictonary) 
 #dictonary.clear()  # remove all elements
 #del dictonary["isPaid"] 
 
