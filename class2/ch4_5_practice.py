@@ -56,30 +56,51 @@
 # print(f"10 appears: {numbers_tup.count(10)} time(s)")
 
 
-#
+# Q6. Make a dictionary of 3 students and their marks. Print all keys, all values, and one student's marks. Then update one student's marks and add a new student. Print the final dictionary.
 students = {
-    "id1": {
-        "Name1" : "Akrima",
-        "Marks1": 80
+    "std1": {
+        "Name" : "Akrima",
+        "Marks": 80
     },
-    "id2": {
-        "Name2" : "Hammad",
-        "Marks2": 90
+    "std2": {
+        "Name" : "Hammad",
+        "Marks": 90
     },
-    "id3": {
-        "Name3" : "Daniyal",
-        "Marks3": 75
+    "std3": {
+        "Name" : "Daniyal",
+        "Marks": 75
     }
 }
 
+# print all keys
 #print(f"Top Keys: {students.keys()}\n")
 #print(f"Inside Keys: {dict(students.values())}\n")
 all_keys = list(students.keys()) + list(dict(students.values())) + list(dict(students.values()).values())
-print(f"All Keys: {all_keys}\n")
-print("\n")
+print(f"All Keys: {all_keys}")
 
-print(f"Top Values: {students.values()}\n")
-print("\n")
-print(f"Inside Values as Dic: {dict(students.values())}\n")
-#all_values = list(students.values()) + list(dict(students.values()).values())
-#print(f"All Values: {all_values}\n")
+# print all values
+#print(f"Inside Values as Dict: {dict(students.values())}\n")
+#print(f"Inside Values as List to dict: {list(students.values())}\n")
+all_values = list(students.values()) + list(students["std1"].values()) + list(students["std2"].values()) + list(students["std3"].values())
+print(f"All Values: {all_values}")
+
+# print one student marks
+print(f"{students["std1"]["Name"]}'s Marks: {students["std1"]["Marks"]}")
+
+# update one student's marks 
+print(f"Std2 Marks before: {students["std2"]["Marks"]}")
+students["std2"]["Marks"] = 79
+print(f"Std2 Marks before: {students["std2"]["Marks"]}")
+
+# add a new student
+students["std4"] = {
+    "Name": "Khurram",
+    "Marks": 55
+}
+
+# print final dictionary
+print(f"Final Dictionary:\n{students}")
+
+
+
+
